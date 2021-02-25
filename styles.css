@@ -1,3 +1,4 @@
+/************************ Basic Reset ************************/
 * {
   margin: 0;
   padding: 0;
@@ -9,13 +10,56 @@
   box-sizing: inherit;
 }
 
+:root {
+  /* Primary */
+  --soft-cyan: hsl(174, 77%, 80%);
+  --strong-cyan: hsl(174, 86%, 45%);
+  --light-grayish-red: hsl(14, 92%, 95%);
+  --light-red: hsl(15, 100%, 70%);
+  --pale-blue: hsl(226, 100%, 87%);
+  /* Neutral */
+  --dark-desaturated-blue: hsl(227, 35%, 25%);
+  --grayish-blue: hsl(225, 20%, 60%);
+  --light-grayish-toggle-bg: hsl(223, 50%, 87%);
+  --light-grayish-blue-slider-bar: hsl(224, 65%, 95%)
+  --very-pale-blue-bg-color: hsl(230, 100%, 99%)
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;
 }
 
 body {
-    background-image: url("/images/bg-pattern.svg");
-    background-repeat: no-repeat;
+  background-image: url("/images/bg-pattern.svg");
+  background-repeat: no-repeat;
   font-family: "Manrope", sans-serif;
+  text-align: center;
 }
+/************************ End Basic Reset ************************/
+/************************ Header ************************/
+.header {
+  background-image: url("/images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 8.9rem 0 3.2rem;
+  padding: 3.2rem 0;
+  border: 2px dotted gold;
+}
+
+.header__heading {
+  color: var(--dark-desaturated-blue);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 2.7rem;
+  margin-bottom: 0.8rem;
+}
+
+.header__paragraph {
+  color: var(--grayish-blue);
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 2.3rem;
+}
+/************************ End Header ************************/
