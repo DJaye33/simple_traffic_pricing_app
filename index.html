@@ -30,26 +30,30 @@
 
     <main class="pricing">
       <section class="pricing-container">
-        <p class="pricing__views">100K pageviews</p>
+        <p class="pricing__views">
+          <span id="views">10</span><span id="type">K</span> pageviews
+        </p>
         <section class="pricing__slider-container">
           <input
             type="range"
-            min="1"
-            max="100"
-            value="1"
+            min="10"
+            max="50"
+            value="0"
+            step="10"
             class="pricing__slider-container-slider"
             id="range"
           />
         </section>
         <span class="pricing__price"
-          >$16.00<small class="pricing__month">/ month</small></span
+          ><span id="price">$8.00</span
+          ><small class="pricing__month">/ month</small></span
         >
       </section>
 
       <section class="billing">
         <span class="billing__monthly">Monthly Billing</span>
         <label class="billing__toggler">
-          <input type="checkbox" class="billing__toggler-checkbox" checked />
+          <input type="checkbox" class="billing__toggler-checkbox" />
           <span class="billing__toggler-slider round"></span>
         </label>
         <span class="billing__yearly">Yearly Billing</span>
@@ -70,5 +74,7 @@
         <button class="trial__list-btn">Start my trial</button>
       </section>
     </main>
+
+    <script src="scripts.js"></script>
   </body>
 </html>

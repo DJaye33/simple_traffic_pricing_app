@@ -34,7 +34,7 @@ body {
   background-color: var(--very-pale-blue-bg-color);
   background-image: url("/images/bg-pattern.svg");
   background-repeat: no-repeat;
-  background-size: 100% 67%;
+  background-size: 100% 57%;
   font-family: "Manrope", sans-serif;
   padding-bottom: 8.8rem;
   text-align: center;
@@ -88,6 +88,7 @@ body {
 .pricing__slider-container {
   width: 100%;
   margin: 2.4rem auto 3.8rem;
+  position: relative;
 }
 
 .pricing__slider-container-slider {
@@ -247,6 +248,10 @@ input:checked + .billing__toggler-slider:before {
 /************************ End Pricing Card ************************/
 /* Media Queries */
 @media screen and (min-width: 588px) {
+  br {
+    display: none;
+  }
+
   .pricing {
     max-width: 588px;
   }
