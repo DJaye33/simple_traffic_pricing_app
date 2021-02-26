@@ -21,8 +21,8 @@
   --dark-desaturated-blue: hsl(227, 35%, 25%);
   --grayish-blue: hsl(225, 20%, 60%);
   --light-grayish-toggle-bg: hsl(223, 50%, 87%);
-  --light-grayish-blue-slider-bar: hsl(224, 65%, 95%)
-  --very-pale-blue-bg-color: hsl(230, 100%, 99%)
+  --light-grayish-blue-slider-bar: #ecf0fb;
+  --very-pale-blue-bg-color: hsl(230, 100%, 99%);
 }
 
 html {
@@ -31,6 +31,7 @@ html {
 }
 
 body {
+  background-color: var(--very-pale-blue-bg-color);
   background-image: url("/images/bg-pattern.svg");
   background-repeat: no-repeat;
   font-family: "Manrope", sans-serif;
@@ -45,7 +46,6 @@ body {
   background-size: contain;
   margin: 8.9rem 0 3.2rem;
   padding: 3.2rem 0;
-  border: 2px dotted gold;
 }
 
 .header__heading {
@@ -63,3 +63,151 @@ body {
   line-height: 2.3rem;
 }
 /************************ End Header ************************/
+/************************ Pricing Card ************************/
+.pricing {
+  background-color: #fff;
+  box-shadow: 0px 20px 30px -5px rgba(127, 137, 185, 0.152073);
+  border-radius: 0.8rem;
+  width: 90%;
+  padding: 3.4rem 0;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #848ead;
+  text-align: center;
+}
+
+.pricing__views {
+  font-weight: 800;
+  line-height: 1.6rem;
+  letter-spacing: 0.17rem;
+  text-transform: uppercase;
+}
+
+.pricing__slider-container {
+  width: 100%;
+  margin: 2.4rem auto 3.8rem;
+}
+
+.pricing__slider-container-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 85%;
+  height: 0.8rem;
+  outline: none;
+  border-radius: 0.5rem;
+  background-color: var(--light-grayish-blue-slider-bar);
+}
+
+.pricing__slider-container-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-image: url("/images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--strong-cyan);
+  box-shadow: 0px 1.5rem 3rem var(--strong-cyan);
+  cursor: pointer;
+}
+
+.pricing__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  font-size: 3.2rem;
+  line-height: 4.4rem;
+  color: var(--dark-desaturated-blue);
+}
+
+.pricing__month {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.9rem;
+  margin-left: 1rem;
+  color: var(--grayish-blue);
+}
+
+.billing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3.4rem auto 3.4rem;
+  width: 90%;
+  max-width: 34rem;
+}
+
+.billing__monthly,
+.billing__yearly {
+  font-weight: 600;
+  font-size: 1.2em;
+  line-height: 1.6rem;
+}
+
+.billing__toggler {
+  position: relative;
+  display: inline-block;
+  width: 4.3rem;
+  height: 2.2rem;
+}
+
+.billing__toggler input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.billing__toggler-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--light-grayish-toggle-bg);
+  transition: 0.4s;
+}
+
+.billing__toggler-slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4rem;
+  width: 1.4rem;
+  left: 0.4rem;
+  bottom: 0.4rem;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+input:checked + .billing__toggler-slider {
+  background-color: #7aeadf;
+}
+
+input:focus + .billing__toggler-slider {
+  box-shadow: 0 0 0 0.1rem #7aeadf;
+}
+
+input:checked + .billing__toggler-slider:before {
+  transform: translateX(2.1rem);
+}
+
+.billing__toggler-slider.round {
+  border-radius: 1.5rem;
+}
+
+.billing__toggler-slider.round:before {
+  border-radius: 50%;
+}
+
+.billing__discount {
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  color: var(--light-red);
+  background-color: var(--light-grayish-red);
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.95rem;
+}
+/************************ End Pricing Card ************************/

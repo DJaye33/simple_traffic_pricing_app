@@ -27,5 +27,34 @@
         No credit card required.
       </p>
     </header>
+
+    <section class="pricing">
+      <p class="pricing__views">100K pageviews</p>
+      <div class="pricing__slider-container">
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value="1"
+          class="pricing__slider-container-slider"
+          id="range"
+        />
+      </div>
+      <span class="pricing__price"
+        >$16.00<small class="pricing__month">/ month</small></span
+      >
+
+      <section class="billing">
+        <span class="billing__monthly">Monthly Billing</span>
+        <label class="billing__toggler">
+          <input type="checkbox" class="billing__toggler-checkbox" checked />
+          <span class="billing__toggler-slider round"></span>
+        </label>
+        <span class="billing__yearly">Yearly Billing</span>
+        <span class="billing__discount">-25% <span hidden>discount</span></span>
+      </section>
+
+      <hr style="height: 0.1rem; background-color: #ecf0fb; border: none" />
+    </section>
   </body>
 </html>
