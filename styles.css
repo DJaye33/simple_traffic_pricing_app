@@ -210,4 +210,35 @@ input:checked + .billing__toggler-slider:before {
   padding: 0.3rem 0.8rem;
   border-radius: 0.95rem;
 }
+
+.trial__list {
+  list-style-image: url("/images/icon-check.svg");
+  list-style-position: inside;
+  margin-top: 2.4rem;
+}
+
+.trial__list-item {
+  margin-bottom: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.trial__list-btn {
+  background-color: var(--dark-desaturated-blue);
+  border: none;
+  border-radius: 2.05rem;
+  outline: transparent;
+  padding: 1.3rem 4.6rem;
+  color: var(--pale-blue);
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  text-align: center;
+  letter-spacing: 0.05rem;
+}
+
+.trial__list-btn:hover {
+  cursor: pointer;
+  color: #fff;
+}
 /************************ End Pricing Card ************************/
