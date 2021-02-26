@@ -34,7 +34,9 @@ body {
   background-color: var(--very-pale-blue-bg-color);
   background-image: url("/images/bg-pattern.svg");
   background-repeat: no-repeat;
+  background-size: 100% 67%;
   font-family: "Manrope", sans-serif;
+  padding-bottom: 8.8rem;
   text-align: center;
 }
 /************************ End Basic Reset ************************/
@@ -235,6 +237,7 @@ input:checked + .billing__toggler-slider:before {
   line-height: 1.6rem;
   text-align: center;
   letter-spacing: 0.05rem;
+  margin-top: 2rem;
 }
 
 .trial__list-btn:hover {
@@ -242,3 +245,47 @@ input:checked + .billing__toggler-slider:before {
   color: #fff;
 }
 /************************ End Pricing Card ************************/
+/* Media Queries */
+@media screen and (min-width: 588px) {
+  .pricing {
+    max-width: 588px;
+  }
+
+  .pricing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .pricing__views {
+    margin-left: 4.6rem;
+    order: 1;
+  }
+
+  .pricing__slider-container {
+    order: 3;
+  }
+
+  .pricing__price {
+    margin-right: 4.6rem;
+    order: 2;
+  }
+
+  .trial {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .trial__list {
+    text-align: left;
+  }
+
+  .billing__discount-word {
+    display: inline-block;
+  }
+}
+/* End Media Queries */
